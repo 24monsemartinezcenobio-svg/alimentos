@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingreso de Alimentos</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(227, 234, 237);
+            margin: 0;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+
+        }
+      
+        
+       form {
+            background: #b0cec8;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="file"],
+        button {
+            width: 80%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #3c0b41;
+            border-radius: 5px;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+            color: #0e0e0e;
+        }
+        h1 {
+            color: #131212ff;
+            }
+         h2 {
+            color: rgb(1, 1, 1);
+            }
+    
+        input:focus, textarea:focus {
+            border-color: #373434; 
+            outline: none;
+        }
+        button { 
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #a9daeaff; 
+            color: rgb(136, 12, 12);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: rgb(76, 108, 152);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Ingresar Alimento </h1>
+    <form action="procesar_alimento.php" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="fecha_caducidad">Fecha de Caducidad:</label><br>
+        <input type="date" id="fecha_caducidad" name="fecha_caducidad" required><br>
+
+        <label for="cantidad">Cantidad:</label><br>
+        <input type="number" id="cantidad" name="cantidad"><br><br>
+
+        <input type="submit" value="Guardar Alimento">
+        <br>
+        <br><a href="consulta.php">Consultar alimentos</a><br>
+    </form>
+</body>
+</html>
